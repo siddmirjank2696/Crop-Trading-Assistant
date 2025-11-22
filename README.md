@@ -13,10 +13,14 @@ This product is an AI Assistant that helps farmers trade crop commodites (Corn, 
 4. Open your terminal
 
 5. Clone this repository locally <br>
-` git clone https://github.com/siddmirjank2696/Crop-Trading-Assistant.git `
+```bash
+ git clone https://github.com/siddmirjank2696/Crop-Trading-Assistant.git 
+```
 
 6. Navigate into the repository <br>
-` cd .\Crop-Trading-Assistant `
+```bash 
+cd .\Crop-Trading-Assistant 
+```
 
 7. Create a file named .env and add this information inside it <br>
 ```env
@@ -26,6 +30,8 @@ AWS_REGION = <Enter your AWS region here>
 ```
 
 8. Execute the pipeline in your Terminal<br>
-` execute_pipeline.bat `
+```cmd
+ execute_pipeline.bat 
+ ```
 
 9. Open your browser and go to localhost:8501 to access the product
