@@ -19,9 +19,11 @@ This product is an AI Assistant that helps farmers trade crop commodites (Corn, 
 ` cd .\Crop-Trading-Assistant `
 
 7. Create a file named .env and add this information inside it <br>
-` AWS_ACCESS_KEY_ID = <Enter your AWS access key here>
+```env
+AWS_ACCESS_KEY_ID = <Enter your AWS access key here>
 AWS_SECRET_ACCESS_KEY = <Enter your AWS secret key here>
-AWS_REGION = <Enter your AWS region here> `
+AWS_REGION = <Enter your AWS region here>
+```
 
 8. Execute the pipeline in your Terminal<br>
 ` execute_pipeline.bat `
