@@ -2,6 +2,10 @@
 
 This product is an AI Assistant that helps farmers trade crop commodites (Corn, Wheat & Soybeans) based on the forecasts and market analysis. It helps farmers make smarter decisions about their harvest by turning complex market data into simple advice. Every day, it forecasts crop prices and analyzes market sentiment to recommend whether they should buy, sell, or wait, so they can maximize profits and reduce risk. With a simple app they can use on any device, farmers get clear, updated guidance without needing to study charts or news, giving them confidence and peace of mind in a fast‑changing market.
 
+### Workflow of this Agentic AI Product
+
+![Alt text](flowchart/flowchart.png)
+
 ### Prerequisites
 
 1. Have an AWS Account
