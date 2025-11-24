@@ -1,9 +1,11 @@
 # Importing required libraries
+import requests
 import pandas as pd
 import yfinance as yf
 import pickle
 import warnings
 from datetime import date, timedelta
+from io import BytesIO
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import GridSearchCV
 from xgboost import XGBRegressor
@@ -132,7 +134,7 @@ class XgBoost:
         df = self.load_data()
 
         # Defining the model path
-        model_path = f"models/{self.crop.strip().lower()}_model.pkl"
+        model_path = f"https://raw.githubusercontent.com/siddmirjank2696/Crop-Trading-Assistant/main/models/{self.crop.strip().lower()}_model.pkl"
 
         # Splitting the date into day of week, day and month
         df["dayofweek"] = df["Date"].dt.dayofweek
@@ -161,8 +163,8 @@ class XgBoost:
         }])
 
         # Loading the xgboost model
-        with open(model_path, "rb") as f:
-            grid = pickle.load(f)
+        response = requests.get(model_path)
+        grid = pickle.load(BytesIO(response.content))
 
         # Predicting the next day price with the best model
         y_pred = grid.best_estimator_.predict(X_pred)[0]
